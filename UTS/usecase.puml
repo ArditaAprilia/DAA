@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+actor Admin
+actor Pelanggan
+
+rectangle "Aplikasi Manajemen Menu Restoran/Cafe" {
+    usecase "Login" as UC_Login
+    usecase "Melihat Menu" as UC_ViewMenu
+    usecase "Tambah Menu" as UC_AddMenu
+    usecase "Edit Menu" as UC_EditMenu
+    usecase "Hapus Menu" as UC_DeleteMenu
+    usecase "Kelola Kategori" as UC_ManageCategory
+}
+
+Pelanggan --> UC_Login
+Pelanggan --> UC_ViewMenu
+
+Admin --> UC_Login
+Admin --> UC_ViewMenu
+Admin --> UC_AddMenu
+Admin --> UC_EditMenu
+Admin --> UC_DeleteMenu
+Admin --> UC_ManageCategory
+
+@enduml

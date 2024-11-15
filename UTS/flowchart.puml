@@ -1,0 +1,24 @@
+@startuml
+start
+
+:Login;
+if (Peran User?) then (Admin)
+    :Akses Pengelolaan Menu;
+    if (Aksi?) then (Tambah Menu)
+        :Input data menu (nama, deskripsi, harga, kategori, status, );
+        :Simpan ke Database;
+    else if (Edit Menu)
+        :Pilih data menu;
+        :Edit informasi menu;
+        :Simpan perubahan ke Database;
+    else if (Hapus Menu)
+        :Pilih data menu;
+        :Hapus dari Database;
+    endif
+else if (Pelanggan)
+    :Akses Daftar Menu;
+    :Lihat informasi menu (nama, deskripsi, harga, kategori, status, );
+endif
+
+stop
+@enduml
