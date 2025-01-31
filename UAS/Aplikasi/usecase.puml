@@ -1,0 +1,27 @@
+@startuml
+
+actor "User" as User
+actor "Admin" as Admin
+
+rectangle "FitLife - Aplikasi Pemantauan Kesehatan dan Kebugaran" {
+    usecase "Registrasi & Login" as UC1
+    usecase "Input Data Kesehatan" as UC2
+    usecase "Melihat Statistik Kesehatan" as UC3
+    usecase "Mengatur Jadwal Latihan" as UC4
+    usecase "Mendapatkan Rekomendasi Kesehatan" as UC5
+    usecase "Menerima Notifikasi & Reminder" as UC6
+    usecase "Mengelola Pengguna" as UC7
+    usecase "Melihat Laporan Pengguna" as UC8
+}
+
+User -- UC1
+User -- UC2
+User -- UC3
+User -- UC4
+User -- UC5
+User -- UC6
+
+Admin -- UC7
+Admin -- UC8
+
+@enduml

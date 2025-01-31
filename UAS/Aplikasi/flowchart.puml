@@ -1,0 +1,34 @@
+@startuml
+start
+
+:User membuka aplikasi;
+:User memilih "Daftar" atau "Login";
+
+if (User sudah memiliki akun?) then (Ya)
+    :User memasukkan kredensial;
+    :Sistem memverifikasi akun;
+    if (Login berhasil?) then (Ya)
+        :User masuk ke dashboard;
+    else (Tidak)
+        :Tampilkan pesan error;
+        stop
+    endif
+else (Tidak)
+    :User mengisi formulir pendaftaran;
+    :Sistem menyimpan data akun;
+    :User berhasil terdaftar;
+endif
+
+:User memasukkan data kesehatan awal;
+:User mengatur jadwal latihan dan target kebugaran;
+
+while (User menggunakan aplikasi?) is (Ya)
+    :User mencatat aktivitas olahraga;
+    :Sistem menghitung progress;
+    :User melihat statistik kesehatan;
+    :Sistem memberikan rekomendasi;
+    :Sistem mengirim notifikasi pengingat;
+endwhile
+
+stop
+@enduml
